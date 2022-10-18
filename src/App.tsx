@@ -1,11 +1,42 @@
+import { useState, useEffect } from 'react'
+import { getBrowserLang } from '@/utils/util'
+import { ConfigProvider } from 'antd'
+import { setLanguage } from '@/store/modules/global'
 import { HashRouter } from 'react-router-dom'
+import { useDispatch, useSelector } from '@/store'
 import Router from '@/routes'
+import zhCN from 'antd/lib/locale/zh_CN'
+import enUS from 'antd/lib/locale/en_US'
+import i18n from 'i18next'
+import 'moment/dist/locale/zh-cn'
 
 function App() {
+	const dispatch = useDispatch()
+	const { language, assemblySize } = useSelector(state => state.global)
+	const [i18nLocale, setI18nLocale] = useState(zhCN)
+
+	// 设置 antd 语言国际化
+	const setAntdLanguage = () => {
+		// 如果 redux 中有默认语言就设置成 redux 的默认语言，没有默认语言就设置成浏览器默认语言
+		if (language && language === 'zh') return setI18nLocale(zhCN)
+		if (language && language === 'en') return setI18nLocale(enUS)
+		if (getBrowserLang() === 'zh') return setI18nLocale(zhCN)
+		if (getBrowserLang() === 'en') return setI18nLocale(enUS)
+	}
+
+	useEffect(() => {
+		// 全局使用国际化
+		i18n.changeLanguage(language || getBrowserLang())
+		dispatch(setLanguage(language || getBrowserLang()))
+		setAntdLanguage()
+	}, [language])
+
 	return (
 		<div className='App'>
 			<HashRouter>
-				<Router></Router>
+				<ConfigProvider locale={i18nLocale} componentSize={assemblySize}>
+					<Router></Router>
+				</ConfigProvider>
 			</HashRouter>
 		</div>
 	)

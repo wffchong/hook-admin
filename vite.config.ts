@@ -9,5 +9,17 @@ export default defineConfig({
 		alias: {
 			'@': resolve(__dirname, './src')
 		}
+	},
+	// global css
+	css: {
+		preprocessorOptions: {
+			less: {
+				// modifyVars: {
+				// 	"primary-color": "#1DA57A",
+				// },
+				javascriptEnabled: true,
+				additionalData: `@import "@/styles/var.less";`
+			}
+		}
 	}
 })
