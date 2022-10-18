@@ -7,13 +7,13 @@ import './index.less'
 
 const Login: React.FC = () => {
 	const dispatch = useAppDispatch()
-	// const { token } = useSelector(state => state)
+	const { token } = useSelector(state => state.global)
 
 	useEffect(() => {
 		console.log(dispatch(setToken))
 		dispatch(setToken('456'))
 	}, [dispatch])
-	return <div className='login-container'>{123}</div>
+	return <div className='login-container'>{token}</div>
 }
 
 export default Login

@@ -22,7 +22,7 @@ const persistConfig = {
 const reducer = combineReducers({ global })
 
 //创建持久化的配置persist的信息
-const persistReducerConfig = persistReducer(persistConfig, reducer)
+const persistReducerConfig = persistReducer(persistConfig, reducer) as typeof reducer
 
 // redux middleWares
 const middleWares = [reduxThunk, reduxPromise]
