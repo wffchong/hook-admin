@@ -29,7 +29,6 @@ const middleWares = [reduxThunk, reduxPromise]
 
 export const store = configureStore({
 	reducer: persistReducerConfig,
-	// 解决控制台报错无法序列号
 	middleware: middleWares,
 	devTools: true
 })

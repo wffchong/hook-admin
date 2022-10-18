@@ -32,13 +32,11 @@ function App() {
 	}, [language])
 
 	return (
-		<div className='App'>
-			<HashRouter>
-				<ConfigProvider locale={i18nLocale} componentSize={assemblySize}>
-					<Router></Router>
-				</ConfigProvider>
-			</HashRouter>
-		</div>
+		<HashRouter>
+			<ConfigProvider locale={i18nLocale} componentSize={assemblySize}>
+				<Router></Router>
+			</ConfigProvider>
+		</HashRouter>
 	)
 }
 
