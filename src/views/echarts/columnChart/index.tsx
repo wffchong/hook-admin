@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const ColumnChart = () => {
-	return <span>ColumnChart</span>;
-};
+const ColumnChart: React.FC = () => {
+	return <span>ColumnChart</span>
+}
 
-export default ColumnChart;
+export default ColumnChart

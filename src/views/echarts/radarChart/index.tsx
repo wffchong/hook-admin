@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const RadarChart = () => {
-	return <span>RadarChart</span>;
-};
+const RadarChart: React.FC = () => {
+	return <span>RadarChart</span>
+}
 
-export default RadarChart;
+export default RadarChart

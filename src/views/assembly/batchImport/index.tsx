@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const BatchImport = () => {
-	return <span>BatchImport</span>;
-};
+const BatchImport: React.FC = () => {
+	return <span>BatchImport</span>
+}
 
-export default BatchImport;
+export default BatchImport

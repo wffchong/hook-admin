@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const NestedChart = () => {
-	return <span>NestedChart</span>;
-};
+const NestedChart: React.FC = () => {
+	return <span>NestedChart</span>
+}
 
-export default NestedChart;
+export default NestedChart

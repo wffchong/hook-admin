@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const SelectIcon = () => {
-	return <span>SelectIcon</span>;
-};
+const SelectIcon: React.FC = () => {
+	return <span>SelectIcon</span>
+}
 
-export default SelectIcon;
+export default SelectIcon

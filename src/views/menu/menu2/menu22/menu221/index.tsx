@@ -1,5 +1,5 @@
-const Menu221 = () => {
-	return <span>Menu221</span>;
-};
+const Menu221: React.FC = () => {
+	return <span>Menu221</span>
+}
 
-export default Menu221;
+export default Menu221

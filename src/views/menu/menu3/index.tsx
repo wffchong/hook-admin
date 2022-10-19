@@ -1,5 +1,5 @@
-const Menu3 = () => {
-	return <span>Menu3</span>;
-};
+const Menu3: React.FC = () => {
+	return <span>Menu3</span>
+}
 
-export default Menu3;
+export default Menu3

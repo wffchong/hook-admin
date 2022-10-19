@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const LineChart = () => {
-	return <span>LineChart</span>;
-};
+const LineChart: React.FC = () => {
+	return <span>LineChart</span>
+}
 
-export default LineChart;
+export default LineChart

@@ -1,5 +1,5 @@
-const DataVisualize = () => {
-	return <span>DataVisualize</span>;
-};
+const DataVisualize: React.FC = () => {
+	return <span>DataVisualize</span>
+}
 
-export default DataVisualize;
+export default DataVisualize

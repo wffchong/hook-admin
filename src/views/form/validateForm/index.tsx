@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const ValidateForm = () => {
-	return <span>ValidateForm</span>;
-};
+const ValidateForm: React.FC = () => {
+	return <span>ValidateForm</span>
+}
 
-export default ValidateForm;
+export default ValidateForm

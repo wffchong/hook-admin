@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const PieChart = () => {
-	return <span>PieChart</span>;
-};
+const PieChart: React.FC = () => {
+	return <span>PieChart</span>
+}
 
-export default PieChart;
+export default PieChart

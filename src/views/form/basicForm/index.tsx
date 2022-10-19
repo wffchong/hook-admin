@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const BasicForm = () => {
-	return <span>BasicForm</span>;
-};
+const BasicForm: React.FC = () => {
+	return <span>BasicForm</span>
+}
 
-export default BasicForm;
+export default BasicForm

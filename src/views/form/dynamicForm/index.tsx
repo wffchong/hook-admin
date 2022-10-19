@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const DynamicForm = () => {
-	return <span>DynamicForm</span>;
-};
+const DynamicForm: React.FC = () => {
+	return <span>DynamicForm</span>
+}
 
-export default DynamicForm;
+export default DynamicForm

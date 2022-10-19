@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const UseComponent = () => {
-	return <span>UseComponent</span>;
-};
+const UseComponent: React.FC = () => {
+	return <span>UseComponent</span>
+}
 
-export default UseComponent;
+export default UseComponent

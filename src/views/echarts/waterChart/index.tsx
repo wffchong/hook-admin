@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const WaterChart = () => {
-	return <span>WaterChart</span>;
-};
+const WaterChart: React.FC = () => {
+	return <span>WaterChart</span>
+}
 
-export default WaterChart;
+export default WaterChart

@@ -1,47 +1,47 @@
-import { useEffect } from "react";
-import { connect } from "react-redux";
-import { Table } from "antd";
-import "./index.less";
+import { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { Table } from 'antd'
+import './index.less'
 
-const UseHooks = (props: any) => {
+const UseHooks: React.FC = (props: any) => {
 	useEffect(() => {
-		console.log(props.authButtons);
-	}, []);
+		console.log(props.authButtons)
+	}, [])
 
 	const dataSource = [
 		{
-			key: "1",
-			name: "胡彦斌",
+			key: '1',
+			name: '胡彦斌',
 			age: 32,
-			address: "西湖区湖底公园1号"
+			address: '西湖区湖底公园1号'
 		},
 		{
-			key: "2",
-			name: "胡彦祖",
+			key: '2',
+			name: '胡彦祖',
 			age: 42,
-			address: "西湖区湖底公园1号"
+			address: '西湖区湖底公园1号'
 		}
-	];
+	]
 
 	const columns = [
 		{
-			title: "姓名",
-			dataIndex: "name",
-			key: "name"
+			title: '姓名',
+			dataIndex: 'name',
+			key: 'name'
 		},
 		{
-			title: "年龄",
-			dataIndex: "age",
-			key: "age"
+			title: '年龄',
+			dataIndex: 'age',
+			key: 'age'
 		},
 		{
-			title: "住址",
-			dataIndex: "address",
-			key: "address"
+			title: '住址',
+			dataIndex: 'address',
+			key: 'address'
 		}
-	];
-	return <Table dataSource={dataSource} columns={columns} />;
-};
+	]
+	return <Table dataSource={dataSource} columns={columns} />
+}
 
-const mapStateToProps = (state: any) => state.auth;
-export default connect(mapStateToProps)(UseHooks);
+const mapStateToProps = (state: any) => state.auth
+export default connect(mapStateToProps)(UseHooks)

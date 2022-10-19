@@ -1,7 +1,7 @@
-import "./index.less";
+import './index.less'
 
-const Embedded = () => {
-	return <iframe src="https://react.docschina.org/" frameBorder="0" className="full-iframe"></iframe>;
-};
+const Embedded: React.FC = () => {
+	return <iframe src='https://react.docschina.org/' frameBorder='0' className='full-iframe'></iframe>
+}
 
-export default Embedded;
+export default Embedded
