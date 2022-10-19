@@ -8,6 +8,8 @@ import { persistStore, persistReducer } from 'redux-persist'
 //导入需要配置的数据源，可以选择，storage，cookie,session等
 import storage from 'redux-persist/lib/storage'
 import global from './modules/global'
+import breadcrumb from './modules/breadcrumb'
+import menu from './modules/menu'
 
 //定义配置的信息
 const persistConfig = {
@@ -16,10 +18,10 @@ const persistConfig = {
 	// 如果不想将部分state持久化，可以将其放入黑名单(blacklist)中.黑名单是设置
 	// blacklist: ['']
 	// 白名单 --> 和黑名单只需要使用一个就行
-	whitelist: ['global']
+	whitelist: ['global', 'breadcrumb', 'menu']
 }
 
-const reducer = combineReducers({ global })
+const reducer = combineReducers({ global, breadcrumb, menu })
 
 //创建持久化的配置persist的信息
 const persistReducerConfig = persistReducer(persistConfig, reducer) as typeof reducer

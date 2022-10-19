@@ -6,3 +6,16 @@ export interface GlobalState {
 	assemblySize: SizeType
 	language: string
 }
+
+/* MenuState */
+export interface MenuState {
+	isCollapse: boolean
+	menuList: Menu.MenuOptions[]
+}
+
+/* BreadcrumbState */
+export interface BreadcrumbState {
+	breadcrumbList: {
+		[propName: string]: any
+	}
+}

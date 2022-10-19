@@ -7,9 +7,12 @@ import { loginApi } from '@/api/modules/login'
 import md5 from 'js-md5'
 import { useDispatch } from '@/store'
 import { setToken } from '@/store/modules/global'
+import { useNavigate } from 'react-router'
+import { HOME_URL } from '@/config/config'
 
 const LoginForm: React.FC = () => {
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 	const { t } = useTranslation()
 
 	// 获取form实例
@@ -23,7 +26,7 @@ const LoginForm: React.FC = () => {
 			const { data } = await loginApi(loginForm)
 			dispatch(setToken(data!.access_token))
 			message.success('登录成功！')
-			// navigate(HOME_URL)
+			navigate(HOME_URL)
 		} finally {
 			setLoading(false)
 		}
