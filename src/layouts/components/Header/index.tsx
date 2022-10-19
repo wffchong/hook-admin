@@ -1,5 +1,5 @@
 import { Layout } from 'antd'
-import { CollapseIcon, BreadcrumbNav } from './components'
+import { CollapseIcon, BreadcrumbNav, AssemblySize, Language, Theme, Fullscreen, AvatarIcon } from './components'
 import './index.less'
 
 const { Header } = Layout
@@ -11,7 +11,14 @@ const LayoutHeader: React.FC = () => {
 				<CollapseIcon />
 				<BreadcrumbNav />
 			</div>
-			<div className='header-ri'></div>
+			<div className='header-ri'>
+				<AssemblySize />
+				<Language />
+				<Theme />
+				<Fullscreen />
+				<span className='username'>Username</span>
+				<AvatarIcon />
+			</div>
 		</Header>
 	)
 }
