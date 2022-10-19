@@ -19,3 +19,9 @@ export interface BreadcrumbState {
 		[propName: string]: any
 	}
 }
+
+/* TabsState */
+export interface TabsState {
+	tabsActive: string
+	tabsList: Menu.MenuOptions[]
+}

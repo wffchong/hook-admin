@@ -10,6 +10,7 @@ import storage from 'redux-persist/lib/storage'
 import global from './modules/global'
 import breadcrumb from './modules/breadcrumb'
 import menu from './modules/menu'
+import tabs from './modules/tabs'
 
 //定义配置的信息
 const persistConfig = {
@@ -18,10 +19,10 @@ const persistConfig = {
 	// 如果不想将部分state持久化，可以将其放入黑名单(blacklist)中.黑名单是设置
 	// blacklist: ['']
 	// 白名单 --> 和黑名单只需要使用一个就行
-	whitelist: ['global', 'breadcrumb', 'menu']
+	whitelist: ['global', 'breadcrumb', 'menu', 'tabs']
 }
 
-const reducer = combineReducers({ global, breadcrumb, menu })
+const reducer = combineReducers({ global, breadcrumb, menu, tabs })
 
 //创建持久化的配置persist的信息
 const persistReducerConfig = persistReducer(persistConfig, reducer) as typeof reducer

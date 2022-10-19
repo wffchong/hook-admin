@@ -68,7 +68,6 @@ const LayoutMenu: React.FC = () => {
 		setLoading(true)
 		try {
 			const { data } = await getMenuList()
-			console.log(data)
 			if (!data) return
 			setMenuList(deepLoopFloat(data))
 			// 存储处理过后的所有面包屑导航栏到 redux 中
@@ -84,7 +83,6 @@ const LayoutMenu: React.FC = () => {
 
 	// 设置当前展开的 subMenu
 	const onOpenChange = (openKeys: string[]) => {
-		console.log(openKeys)
 		if (openKeys.length === 0 || openKeys.length === 1) return setOpenKeys(openKeys)
 		const latestOpenKey = openKeys[openKeys.length - 1]
 		if (latestOpenKey.includes(openKeys[0])) return setOpenKeys(openKeys)
@@ -94,7 +92,6 @@ const LayoutMenu: React.FC = () => {
 	// 点击当前菜单跳转页面
 	// const navigate = useNavigate()
 	const clickMenu: MenuProps['onClick'] = ({ key }: { key: string }) => {
-		console.log(key)
 		navigate(key)
 	}
 
