@@ -17,7 +17,6 @@ const LayoutMenu: React.FC = () => {
 	const navigate = useNavigate()
 	const { isCollapse } = useSelector(state => state.menu)
 	const { pathname } = useLocation()
-	console.log(pathname)
 	const [loading, setLoading] = useState<boolean>(false)
 	const [openKeys, setOpenKeys] = useState<string[]>([])
 	const [selectedKeys, setSelectedKeys] = useState<string[]>([pathname])

@@ -2,6 +2,7 @@ import { Layout } from 'antd'
 import LayoutMenu from './components/Menu'
 import LayoutHeader from './components/Header'
 import LayoutTabs from './components/Tabs'
+import LayoutFooter from './components/Footer'
 import './index.less'
 import { useSelector } from '@/store'
 
@@ -18,6 +19,7 @@ const LayoutIndex: React.FC = () => {
 			<Layout>
 				<LayoutHeader></LayoutHeader>
 				<LayoutTabs></LayoutTabs>
+				<LayoutFooter></LayoutFooter>
 			</Layout>
 		</section>
 	)
