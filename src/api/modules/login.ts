@@ -19,3 +19,8 @@ export const loginApi = (params: Login.ReqLoginForm) => {
 export const getMenuList = () => {
 	return http.get<Menu.MenuOptions[]>(PORT1 + `/menu/list`)
 }
+
+// * 获取按钮权限
+export const getAuthorButtons = () => {
+	return http.get<Login.ResAuthButtons>(PORT1 + `/auth/buttons`)
+}

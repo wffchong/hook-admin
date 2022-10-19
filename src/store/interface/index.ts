@@ -25,3 +25,11 @@ export interface TabsState {
 	tabsActive: string
 	tabsList: Menu.MenuOptions[]
 }
+
+/* AuthState */
+export interface AuthState {
+	authButtons: {
+		[propName: string]: any
+	}
+	authRouter: string[]
+}
