@@ -1,4 +1,4 @@
-import { BreadcrumbState } from '../interface'
+import { BreadcrumbState } from '@/store/interface'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const breadcrumbState: BreadcrumbState = {
